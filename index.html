@@ -37,23 +37,19 @@
         </div>
     </header>
 
-
     <!-- Banner Section -->
-
     <section class="image-section">
         <img src="images/banner.jpg" alt="Banner">
     </section>
 
 
     <!-- Products Section -->
-
     <section class="image-section">
         <img src="images/products-v1.png" alt="Products">
     </section>
 
 
     <footer>
-
         <div class="footer">
 
             <div class="footer-logo">
@@ -93,7 +89,6 @@
             </div>
 
         </div>
-
     </footer>
 
     <script>
@@ -101,7 +96,8 @@
         const navLinks = document.getElementById('nav-links');
 
         hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navLinks.classList.toggle('active'); // show/hide menu
+            hamburger.classList.toggle('active'); // animate hamburger to X
         });
     </script>
 
