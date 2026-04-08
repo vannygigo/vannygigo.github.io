@@ -148,3 +148,50 @@ footer h3 {
         padding: 6px 8px;
     }
 }
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        /* hide menu by default */
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 70px;
+        /* below header */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    nav a {
+        margin: 10px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        /* show hamburger */
+    }
+}
+
+/* Show menu when active */
+nav.active {
+    display: flex;
+}
