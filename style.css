@@ -13,31 +13,9 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    /* allow wrapping on small screens */
-}
-
 /* LOGO */
 .logo img {
     height: 50px;
-}
-
-/* MENU */
-nav {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    /* allow menu to wrap */
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
 }
 
 /* SEARCH */
@@ -143,15 +121,43 @@ footer h3 {
     }
 }
 
-/* Desktop Menu (unchanged) */
+/* NAVIGATION */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
+}
+
+/* MENU */
 nav {
     display: flex;
-    gap: 15px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: darkorange !important;
 }
 
 .hamburger {
     display: none;
     /* hidden on desktop */
+}
+
+/* SEARCH */
+input {
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
 }
 
 /* Mobile Styles */
@@ -209,6 +215,7 @@ nav {
     }
 }
 
+
 /* Optional: hamburger turns into X when menu active */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -220,4 +227,22 @@ nav {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* overlapping image buttons */
+.image-container {
+    position: relative;
+}
+
+.base-image {
+    width: 100%;
+    display: block;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    width: 150px;
+    height: 100px;
 }

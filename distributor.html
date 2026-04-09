@@ -16,43 +16,21 @@
 
     <!-- Banner Section -->
     <section class="image-section">
-        <img src="images/banner.jpg" alt="Banner" class="base-image">
+        <img src="images/distributor-banner.jpg" alt="Banner">
     </section>
-
-    <!-- <section class="image-container">
-        <img src="images/banner.jpg" alt="Banner" class="base-image">
-        <img src="/images/become-distributor-button.png" alt="Overlay" class="overlay-image">
-    </section> -->
 
     <!-- Products Section -->
     <section class="image-section">
-        <img src="images/products-v1.png" alt="Products">
+        <img src="images/distributor-body.jpg" alt="Distributor">
     </section>
 
     <div id="footer"></div>
 
     <script>
-        function setActiveNav() {
-            const links = document.querySelectorAll("#nav-links a");
-
-            let currentPage = window.location.pathname.split("/").pop();
-
-            if (currentPage === "" || currentPage === "/") {
-                currentPage = "index.html";
-            }
-
-            links.forEach(link => {
-                console.log(link);
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("active");
-                }
-            });
-        }
         fetch("nav.html")
             .then(response => response.text())
             .then(data => {
                 document.getElementById("navbar").innerHTML = data;
-                setActiveNav();
 
                 const hamburger = document.getElementById('hamburger');
                 const navLinks = document.getElementById('nav-links');
@@ -61,7 +39,6 @@
                     navLinks.classList.toggle('active'); // show/hide menu
                     hamburger.classList.toggle('active'); // animate hamburger to X
                 });
-
             });
     </script>
 
@@ -72,8 +49,6 @@
                 document.getElementById("footer").innerHTML = data;
             });
     </script>
-
-
 
 </body>
 
