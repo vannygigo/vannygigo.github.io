@@ -242,17 +242,42 @@ input {
 /* overlapping image buttons */
 .image-container {
     position: relative;
+    width: 100%;
 }
 
-.base-image {
+.bg-image {
     width: 100%;
+    height: auto;
     display: block;
 }
 
-.overlay-image {
+.overlay-image-1 {
     position: absolute;
-    top: 40px;
-    left: 60px;
-    width: 150px;
-    height: 100px;
+    top: 35%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+}
+
+.overlay-image-2 {
+    position: absolute;
+    top: 35%;
+    left: calc(15% + 200px);
+    transform: translate(-50%, -50%);
+    width: 180px;
+}
+
+/* overlapping image buttons on Mobile layout */
+@media (max-width: 768px) {
+    .overlay-image-1 {
+        top: 40%;
+        left: 25%;
+        width: 120px;
+    }
+
+    .overlay-image-2 {
+        top: 55%;
+        left: 25%;
+        width: 120px;
+    }
 }
