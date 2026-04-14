@@ -64,6 +64,11 @@ footer h3 {
     margin: 10px 0;
 }
 
+.footer-title-section {
+    font-size: large;
+    font-weight: bold;
+}
+
 .social-icons {
     margin-top: 10px;
     display: flex;
@@ -90,14 +95,14 @@ footer h3 {
         /* center content */
         text-align: center;
         /* center text */
-        gap: 20px;
+        gap: 0px;
         /* space between stacked items */
     }
 
     .footer>div {
         width: 100%;
         /* full width for each section */
-        margin-bottom: 20px;
+        /* margin-bottom: 5px; */
     }
 
     .footer-logo img {
