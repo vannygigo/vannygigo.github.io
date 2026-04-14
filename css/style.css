@@ -259,31 +259,35 @@ input {
 .overlay-image-1 {
     position: absolute;
     top: 35%;
-    left: 15%;
+    left: 13%;
     transform: translate(-50%, -50%);
-    width: 180px;
+    width: 240px;
+    height: 40px;
 }
 
 .overlay-image-2 {
     position: absolute;
     top: 35%;
-    left: calc(15% + 200px);
+    left: calc(13% + 270px);
     transform: translate(-50%, -50%);
-    width: 180px;
+    width: 240px;
+    height: 40px;
 }
 
 /* overlapping image buttons on Mobile layout */
 @media (max-width: 768px) {
     .overlay-image-1 {
-        top: 40%;
-        left: 25%;
+        top: 37%;
+        left: 20%;
         width: 120px;
+        height: 23px;
     }
 
     .overlay-image-2 {
-        top: 55%;
-        left: 25%;
+        top: 50%;
+        left: 20%;
         width: 120px;
+        height: 23px;
     }
 }
 
